@@ -9,32 +9,32 @@ import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Request a Roofing Quote',
+  title: 'Solicite um orçamento',
   description:
-    'Request a quote for roof repairs, replacement, gutters or maintenance. CJ Roofing Services Ltd is open 24 hours and serves Dublin.',
+    'Fale com a G.A Calhas Serralheria e Vidraçaria para solicitar uma avaliação de calhas, rufos ou telhados em Itapevi.',
   pathname: '/book-appointment/',
 });
 
 const BOOKING_STEPS = [
   {
     step: 1,
-    title: 'Send Your Request',
-    description: 'Tell us what roofing work you need and when you would like us to contact you.',
+    title: 'Conte o que precisa',
+    description: 'Conte para a equipe sobre o telhado, as calhas ou o serviço que procura.',
   },
   {
     step: 2,
-    title: 'Team Review',
-    description: 'Our team reviews your enquiry and discusses availability and next steps.',
+    title: 'Avaliação do local',
+    description: 'A equipe verifica as condições e as medidas necessárias.',
   },
   {
     step: 3,
-    title: 'We Get in Touch',
-    description: 'We contact you to discuss your request and arrange an assessment.',
+    title: 'Orçamento',
+    description: 'O escopo do serviço e o orçamento são combinados após a avaliação.',
   },
   {
     step: 4,
-    title: 'Roofing Work',
-    description: 'Our team completes the agreed roofing work at your property.',
+    title: 'Execução do serviço',
+    description: 'A equipe combina o prazo e os detalhes do serviço com você.',
   },
 ];
 
@@ -44,17 +44,17 @@ export default function BookAppointmentPage() {
       {/* SECTION 1: Appointment Introduction */}
       <section className="py-16 md:py-24 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
-          <Breadcrumbs items={[{ name: 'Request a Quote', path: '/book-appointment/' }]} />
+          <Breadcrumbs items={[{ name: 'Solicitar orçamento', path: '/book-appointment/' }]} />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-8 items-start">
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 uppercase tracking-wider font-medium">
-                  Personal Service
+                  Atendimento próximo
                 </span>
-                <WordRevealH1 text="Request a roof assessment." />
+                  <WordRevealH1 text="Solicite um orçamento para seu telhado ou calhas." />
                 <div className="mt-8">
-                  <ScrubbedParagraph text="Request an assessment for leaks, damaged tiles, gutters, roof sealing or maintenance. We serve Dublin and surrounding areas." />
+                  <ScrubbedParagraph text="Fale com a G.A Calhas Serralheria e Vidraçaria sobre limpeza ou instalação de calhas, rufos e serviços de telhado em Itapevi." />
                 </div>
               </AnimateOnScroll>
             </div>
@@ -62,12 +62,12 @@ export default function BookAppointmentPage() {
             <div className="lg:col-span-4 lg:pl-6">
               <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
                 <div className="p-6 bg-paper border border-mist space-y-3 font-body text-13 text-forest-ink/80 shadow-sm">
-                  <span className="font-medium text-forest block">Call our team:</span>
+                  <span className="font-medium text-forest block">Ligue para nossa equipe:</span>
                   <p className="text-forest-ink/70">
-                    Prefer to speak with us directly? Call us any time.
+                    Prefere falar diretamente conosco? Ligue durante o horário de funcionamento.
                   </p>
                   <a
-                    href="tel:+35315563783"
+                    href="tel:+5511985934913"
                     className="font-display text-17 text-forest font-semibold block hover:underline"
                   >
                     {CLINIC_INFO.contact.phone}
@@ -88,13 +88,13 @@ export default function BookAppointmentPage() {
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <div>
                   <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                    How It Works
+                    Como funciona
                   </span>
                   <h2 className="font-display text-26 md:text-33 text-forest-ink mb-4">
-                    What Happens Next
+                    Próximas etapas
                   </h2>
                   <p className="font-body text-15 text-forest-ink/80 leading-relaxed mb-6">
-                    We take the time to understand your roof and explain the available options clearly.
+                    Conte o que precisa e a equipe entrará em contato para conversar sobre avaliação e orçamento.
                   </p>
                 </div>
               </AnimateOnScroll>
@@ -138,17 +138,17 @@ export default function BookAppointmentPage() {
             {/* Contact Options */}
             <AnimateOnScroll animation="fade-up" delay={0.1}>
               <div className="p-8 bg-paper border border-mist h-full shadow-sm">
-                <span className="font-body text-13 text-forest block mb-2 font-medium uppercase tracking-wider">Contact</span>
-                <h3 className="font-display text-21 text-forest-ink mb-4">Talk to Our Team</h3>
+                <span className="font-body text-13 text-forest block mb-2 font-medium uppercase tracking-wider">Contato</span>
+                <h3 className="font-display text-21 text-forest-ink mb-4">Fale com nossa equipe</h3>
                 <div className="space-y-3 font-body text-13 text-forest-ink/80">
                   <div>
-                    <span className="text-forest-ink/60 block">Phone:</span>
+                    <span className="text-forest-ink/60 block">Telefone:</span>
                     <a href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`} className="font-medium text-forest hover:underline">
                       {CLINIC_INFO.contact.phone}
                     </a>
                   </div>
                   <div>
-                    <span className="text-forest-ink/60 block">Phone:</span>
+                    <span className="text-forest-ink/60 block">Telefone:</span>
                     <a href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`} className="font-medium text-forest hover:underline">
                       {CLINIC_INFO.contact.phone}
                     </a>
@@ -160,8 +160,8 @@ export default function BookAppointmentPage() {
             {/* Opening Hours */}
             <AnimateOnScroll animation="fade-up" delay={0.2}>
               <div className="p-8 bg-paper border border-mist h-full shadow-sm">
-                <span className="font-body text-13 text-forest block mb-2 font-medium uppercase tracking-wider">Hours</span>
-                <h3 className="font-display text-21 text-forest-ink mb-4">Opening Hours</h3>
+                <span className="font-body text-13 text-forest block mb-2 font-medium uppercase tracking-wider">Horários</span>
+                <h3 className="font-display text-21 text-forest-ink mb-4">Horário de funcionamento</h3>
                 <div className="space-y-1.5 font-body text-13 text-forest-ink/80">
                   {CLINIC_INFO.schedule.map((item) => (
                     <div key={item.day} className="flex justify-between">
@@ -176,10 +176,10 @@ export default function BookAppointmentPage() {
             {/* Service Area */}
             <AnimateOnScroll animation="fade-up" delay={0.3}>
               <div className="p-8 bg-paper border border-mist h-full shadow-sm">
-                <span className="font-body text-13 text-forest block mb-2 font-medium uppercase tracking-wider">Location</span>
-                <h3 className="font-display text-21 text-forest-ink mb-4">Service Area</h3>
+                <span className="font-body text-13 text-forest block mb-2 font-medium uppercase tracking-wider">Localização</span>
+                <h3 className="font-display text-21 text-forest-ink mb-4">Endereço</h3>
                 <p className="font-body text-13 text-forest-ink/80 leading-relaxed mb-3">
-                  We serve Dublin and surrounding areas. Contact us to confirm availability for your property.
+                  Atendemos em Itapevi. Entre em contato para solicitar uma avaliação do seu imóvel.
                 </p>
               </div>
             </AnimateOnScroll>
